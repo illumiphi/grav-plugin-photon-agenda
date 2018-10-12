@@ -86,13 +86,13 @@ class PhotonAgendaPlugin extends Plugin
         // styles
         if ($this->config->get('plugins.photon-agenda.built_in_css')) {
           $css = 'plugin://photon-agenda/assets/agenda.css';
-          $assets->addCss($css);
+          $assets->addCss($css, 100, false, 'photon-plugins' );
         }
 
         // scripts
         if ($this->config->get('plugins.photon-agenda.built_in_js')) {
           $js = 'plugin://photon-agenda/assets/agenda.js';
-          $assets->addJs($js);
+          $assets->addJs($js, 100, false, 'defer', 'photon-plugins' );
         }
 
 
